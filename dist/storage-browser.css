@@ -1,0 +1,9 @@
+.storage-browser-filter input {
+  line-height: 26px;
+  border: none;
+  margin-left: 16px;
+}
+
+.storage-browser-filter input:focus {
+  outline: none;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "storage-browser",
+  "description": "Storage browser UI plugin",
+  "version": "0.0.0",
+  "main": "dist/storage-browser.controller.js",
+  "files": [
+    "dist/storage-browser.controller.js",
+    "dist/storage-browser.html",
+    "dist/storage-browser.css",
+    "dist/storage-browser-dialog.html"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgeewax/gcloud-ui-storage-browser.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jgeewax/gcloud-ui-storage-browser/issues"
+  },
+  "homepage": "https://github.com/jgeewax/gcloud-ui-storage-browser#readme",
+  "gcloud": {
+    "name": "Storage Browser"
+  },
+}

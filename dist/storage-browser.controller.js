@@ -14,7 +14,7 @@
         parent: 'project',
         controller: 'StorageBrowserCtrl',
         controllerAs: 'browser',
-        templateUrl: 'app/components/storage-browser/storage-browser.html',
+        templateUrl: 'storage-browser.html',
         resolve: { buckets: getBuckets }
       });
   }
@@ -74,7 +74,7 @@
       $mdDialog.show({
         parent: angular.element(document.body),
         targetEvent: $event,
-        templateUrl: 'app/components/storage-browser/storage-browser-dialog.html',
+        templateUrl: 'storage-browser-dialog.html',
         controller: DialogCtrl,
         controllerAs: 'dialog',
         bindToController: true

@@ -7,7 +7,6 @@
     .config(routes)
     .controller('StorageBrowserCtrl', StorageBrowserCtrl);
 
-  /** @ngInject */
   function routes($stateProvider) {
     $stateProvider
       .state('storage-browser', {
@@ -20,7 +19,8 @@
       });
   }
 
-  /** @ngInject */
+  routes.$inject = ['$stateProvider'];
+
   function getBuckets($stateParams, GApi) {
     GApi.load('storage', 'v1');
 
@@ -29,7 +29,8 @@
     });
   }
 
-  /** @ngInject */
+  getBuckets.$inject = ['$stateParams', 'GApi'];
+
   function StorageBrowserCtrl($q, $mdDialog, $stateParams, GApi, buckets) {
     var browser = this;
 
@@ -94,6 +95,8 @@
     }
   }
 
+  StorageBrowserCtrl.$inject = ['$q', '$mdDialog', '$stateParams', 'GApi', 'buckets'];
+
   /** @ngInject */
   function DialogCtrl($mdDialog, $stateParams, GApi) {
     var dialog = this;
@@ -123,6 +126,8 @@
       $mdDialog.hide();
     }
   }
+
+  DialogCtrl.$inject = ['$mdDialog', '$stateParams', 'GApi'];
 
   if (typeof module !== 'undefined') {
     module.exports = mod;

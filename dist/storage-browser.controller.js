@@ -10,7 +10,7 @@
   function routes($stateProvider) {
     $stateProvider
       .state('storage-browser', {
-        url: '/storage-browser',
+        url: '/plugins/storage-browser',
         parent: 'project',
         controller: 'StorageBrowserCtrl',
         controllerAs: 'browser',

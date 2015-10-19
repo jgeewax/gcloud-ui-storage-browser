@@ -10,8 +10,7 @@
   function routes($stateProvider) {
     $stateProvider
       .state('storage-browser', {
-        url: '/plugins/storage-browser',
-        parent: 'project',
+        parent: 'plugin',
         controller: 'StorageBrowserCtrl',
         controllerAs: 'browser',
         templateUrl: 'storage-browser.html',
@@ -31,8 +30,10 @@
 
   getBuckets.$inject = ['$stateParams', 'GApi'];
 
-  function StorageBrowserCtrl($q, $mdDialog, $stateParams, GApi, buckets) {
+  function StorageBrowserCtrl($q, $mdDialog, $stateParams, $plugin, GApi, buckets) {
     var browser = this;
+
+    console.log($plugin);
 
     // props
     browser.buckets = buckets.items;
@@ -95,7 +96,7 @@
     }
   }
 
-  StorageBrowserCtrl.$inject = ['$q', '$mdDialog', '$stateParams', 'GApi', 'buckets'];
+  StorageBrowserCtrl.$inject = ['$q', '$mdDialog', '$stateParams', '$plugin', 'GApi', 'buckets'];
 
   /** @ngInject */
   function DialogCtrl($mdDialog, $stateParams, GApi) {
